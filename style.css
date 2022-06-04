@@ -1,9 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
+:root {
+    --primary-color: #662193;
+    --secondary-color: #b360eb;
+    --off-dark: #3e3e3e;
+}
+
 body {
-    background-color: black;
+    background-color: rgb(25, 25, 25);
     color: white;
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
+    text-align: center;
+    display:flex; 
+    flex-direction:column;
+    height:100vh;
+}
+h1 {
+    background-color: var(--primary-color);
+    font-size: 2.2rem;
+    padding: 0.8rem;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.dob, .lucky-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.6rem;
+}
+
+.dob label, .lucky-num label {
+    font-size: 1.8rem;
+}
+
+.dob input, .lucky-num input {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.check-btn {
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.3rem 1.5rem;
+    margin: 1rem;
+    box-shadow: 4px 4px var(--primary-color);
+}
+.check-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+.divider {
+    width: 30rem;
+    padding: 1px;
+    background-color: var(--off-dark);
+}
+
+span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.gif {
+    width: 18rem;
+}
+.message {
+    font-size: 1.3rem;
+    background-color: var(--off-dark);
+    padding: 0.1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    gap: 1.5rem;
+}
+.social-icons {
+    width: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+.privacy {
+    margin-top: auto;
+    margin-bottom: 0.3rem;
 }
