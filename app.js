@@ -34,15 +34,15 @@ function sum(dob) {
 function checkLuckyOrNot(dob, luckyNum) {
     if (sum(dob) % luckyNum === 0) {
         message.innerHTML = 'Your Birthday is <span>Lucky</span>';
-        gif.style.display = "block";
-        message.style.display = "block";
         gif.src = './Images/lucky-gif.webp';
-        gif.alt = 'Party scene from "The Office"'
+        gif.alt = 'Party scene from "The Office"';
+        message.style.display = "block";
+        gif.style.display = "block";
     } else {
         message.innerHTML = 'Your Birthday is not <span>Lucky</span>';
-        gif.style.display = "block";
-        message.style.display = "block";
         gif.src = './Images/unlucky-gif.webp';
         gif.alt = 'A man screaming "Unlucky"';
+        message.style.display = "block";
+        gif.style.display = "block";
     }
 }
