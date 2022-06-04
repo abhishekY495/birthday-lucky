@@ -74,20 +74,20 @@ main {
 }
 
 span {
-    font-size: 1.5rem;
     font-weight: 700;
     color: var(--secondary-color);
 }
 
 .gif {
-    width: 18rem;
+    width: 20rem;
+    border-radius: 5px;
 }
 .message {
     font-size: 1.3rem;
     background-color: var(--off-dark);
     padding: 0.1rem 1.5rem;
     border-radius: 0.5rem;
-    margin-top: 1rem;
+    margin: 1rem 0 0.5rem 0;
 }
 
 footer {
@@ -106,4 +106,61 @@ footer {
 .privacy {
     margin-top: auto;
     margin-bottom: 0.3rem;
+}
+
+
+@media (max-width:734px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width:518px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    .dob label, .lucky-num label {
+        font-size: 1.5rem;
+    }
+    .dob input, .lucky-num input {
+        font-size: 1rem;
+    }
+    .divider {
+        width: 90%;
+    }
+    .check-btn {
+        font-size: 1.1rem;
+    }
+    .message {
+        font-size: 1.2rem;
+    }
+    footer {
+        padding: 0.3rem;
+    }
+    .social-icons {
+        width: 1.4rem;
+    }
+}
+
+@media (max-width:390px) {
+    main {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+    }
+    .dob label, .lucky-num label {
+        font-size: 1.2rem;
+    }
+    .message {
+        padding: 0.1rem 1rem;
+    }
+    .privacy {
+        font-size: 0.8rem;
+    }
+    .gif {
+        width: 18rem;
+    }
 }
