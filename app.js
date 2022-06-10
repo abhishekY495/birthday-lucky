@@ -2,9 +2,11 @@ const dateOfBirth = document.querySelector('#date-of-birth');
 const luckyNumber = document.querySelector('#lucky-number');
 const checkBtn = document.querySelector('.check-btn');
 const message = document.querySelector('.message');
-const gif = document.querySelector('.gif');
+const luckyGif = document.querySelector('.lucky-gif');
+const unluckyGif = document.querySelector('.unlucky-gif');
 
-gif.style.display = "none";
+luckyGif.style.display = "none";
+unluckyGif.style.display = "none";
 message.style.display = "none";
 
 checkBtn.addEventListener('click', luckyOrNot);
@@ -16,7 +18,8 @@ function luckyOrNot() {
     if (dob && luckyNum) {
         checkLuckyOrNot(dob, luckyNum);
     } else {
-        gif.style.display = "none";
+        unluckyGif.style.display = "none";
+        luckyGif.style.display = "none";
         message.style.display = "block";
         message.innerText = 'Enter both fields.'
     }
@@ -33,16 +36,22 @@ function sum(dob) {
 
 function checkLuckyOrNot(dob, luckyNum) {
     if (sum(dob) % luckyNum === 0) {
-        message.innerHTML = 'Your Birthday is <span>Lucky</span>';
-        gif.src = './Images/lucky-gif.webp';
-        gif.alt = 'Party scene from "The Office"';
-        message.style.display = "block";
-        gif.style.display = "block";
+        luckyMsgOutput();
     } else {
-        message.innerHTML = 'Your Birthday is not <span>Lucky</span>';
-        gif.src = './Images/unlucky-gif.webp';
-        gif.alt = 'A man screaming "Unlucky"';
-        message.style.display = "block";
-        gif.style.display = "block";
+        unluckyMsgOutput();
     }
+}
+
+function luckyMsgOutput() {
+    message.innerHTML = 'Your Birthday is <span>Lucky</span>';
+    message.style.display = "block";
+    unluckyGif.style.display = "none";
+    luckyGif.style.display = "block";
+}
+
+function unluckyMsgOutput() {
+    message.innerHTML = 'Your Birthday is not <span>Lucky</span>';
+    message.style.display = "block";
+    luckyGif.style.display = "none";
+    unluckyGif.style.display = "block";
 }
