@@ -50,7 +50,7 @@ function luckyMsgOutput() {
 }
 
 function unluckyMsgOutput() {
-    message.innerHTML = 'Your Birthday is not <span>Lucky</span>';
+    message.innerHTML = 'Your Birthday is <span>Not Lucky</span>';
     message.style.display = "block";
     luckyGif.style.display = "none";
     unluckyGif.style.display = "block";
