@@ -5,8 +5,6 @@ const message = document.querySelector('.message');
 const luckyGif = document.querySelector('.lucky-gif');
 const unluckyGif = document.querySelector('.unlucky-gif');
 
-luckyGif.style.display = "none";
-unluckyGif.style.display = "none";
 message.style.display = "none";
 
 checkBtn.addEventListener('click', luckyOrNot);
@@ -46,6 +44,7 @@ function luckyMsgOutput() {
     message.innerHTML = 'Your Birthday is <span>Lucky</span>';
     message.style.display = "block";
     unluckyGif.style.display = "none";
+    luckyGif.src = "./Images/lucky-gif.webp";
     luckyGif.style.display = "block";
 }
 
@@ -53,5 +52,6 @@ function unluckyMsgOutput() {
     message.innerHTML = 'Your Birthday is <span>Not Lucky</span>';
     message.style.display = "block";
     luckyGif.style.display = "none";
+    unluckyGif.src = "./Images/unlucky-gif.webp";
     unluckyGif.style.display = "block";
 }
